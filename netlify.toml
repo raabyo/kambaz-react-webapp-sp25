@@ -7,8 +7,4 @@
   NODE_ENV = "production"
   # Add other environment variables if needed
 
-[functions]
-  directory = "netlify-functions"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"  # If using Next.js, for example
