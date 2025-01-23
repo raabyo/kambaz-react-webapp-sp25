@@ -7,13 +7,6 @@
   NODE_ENV = "production"
   # Add other environment variables if needed
 
-[redirects]
-  # Example redirect from old URL to new one
-  [redirects.rules]
-    from = "/old-path"
-    to = "/new-path"
-    status = 301
-
 [functions]
   directory = "netlify-functions"
 
