@@ -1,0 +1,32 @@
+[
+    {
+        "_id": "A1", 
+        "title": "HTML Basics", 
+        "course": "RS101",
+        "description": ""
+    },
+    {
+        "_id": "A2", 
+        "title": "CSS Basics", 
+        "course": "RS101",
+        "description": ""
+    },
+    {
+        "_id": "A3", 
+        "title": "React Intro", 
+        "course": "RS101",
+        "description": ""
+    },
+    {
+        "_id": "A4", 
+        "title": "Cognitive Development", 
+        "course": "RS102",
+        "description": ""
+    },
+    {
+        "_id": "A5", 
+        "title": "Axon Terminal", 
+        "course": "RS102",
+        "description": ""
+    }
+]

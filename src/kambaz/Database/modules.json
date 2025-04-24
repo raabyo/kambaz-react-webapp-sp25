@@ -1,0 +1,57 @@
+[
+    {
+        "name": "Web Development",
+        "lessons": [
+            {
+                "name": "Lesson 1: Intro"
+            },
+            {
+                "name": "Lesson 2: Intro to HTML"
+            }
+        ]
+    },
+    {
+        "name": "Design Systems",
+        "lessons": [
+            {
+                "name": "Lesson 1: Intro"
+            },
+            {
+                "name": "Lesson 2: Intro to Components"
+            }
+        ]
+    },
+    {
+        "name": "Object Oriented Design",
+        "lessons": [
+            {
+                "name": "Lesson 1: Intro"
+            },
+            {
+                "name": "Lesson 2: Intro to Classes & Interfaces"
+            }
+        ]
+    },
+    {
+        "name": "User Experience Design",
+        "lessons": [
+            {
+                "name": "Lesson 1: Intro"
+            },
+            {
+                "name": "Lesson 2: Intro to Figma"
+            }
+        ]
+    },
+    {
+        "name": "Intro to Psychology",
+        "lessons": [
+            {
+                "name": "Lesson 1: Intro"
+            },
+            {
+                "name": "Lesson 2: Intro to Development"
+            }
+        ]
+    }
+]

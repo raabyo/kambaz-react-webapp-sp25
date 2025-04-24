@@ -1,4 +1,11 @@
+import { ListGroup } from "react-bootstrap";
+import { Link, useParams } from "react-router-dom";
+import * as db from "../../Database";
+
 export default function Assignments() {
+    const { cid } = useParams();
+    const assignments = db.assignments.filter((a: any) => a.course === cid)
+
     return (
         <div id="wd-assignments">
             <span>
@@ -10,42 +17,21 @@ export default function Assignments() {
             </span>
 
 
-            <h3>Assignments 40% of Total <button>+</button> </h3>
+            <h3 id="wd-assignments-title">Assignments 40% of Total <button>+</button> </h3>
 
-
-            <ul id="wd-assignment-list">
-                <li className="wd-assignment-list-item">
-                    <a href="#/Kambaz/Courses/1234/Assignments/123"
-                        className="wd-assignment-link">
-                        A1 - ENV + HTML </a>
-                        <p>
-                            Multiple Modules | Not available until May 6 at 12:00am |
-                            Due May 13 at 11:59pm | 100pts
-                        </p>
-                </li>
-
-                <li className="wd-assignment-list-item">
-                <a href="#/Kambaz/Courses/1234/Assignments/456"
-                        className="wd-assignment-link">
-                        A2 - CSS + BOOTSTRAP </a>
-                        <p>
-                            Multiple Modules | Not available until May 13 at 12:00am |
-                            Due May 20 at 11:59pm | 100pts
-                        </p>
-                </li>
-
-                <li className="wd-assignment-list-item">
-                <a href="#/Kambaz/Courses/1234/Assignments/789"
-                        className="wd-assignment-link">
-                        A3 - JAVASCRIPT + REACT </a>
-                        <p>
-                            Multiple Modules | Not available until May 20 at 12:00am |
-                            Due May 27 at 11:59pm | 100pts
-                        </p>
-                </li>
-
-
-            </ul>
-        </div>
-    );
+            <ListGroup id="wd-assignment-groups">
+                {assignments.map((assignment: any) => (
+                    <ListGroup.Item 
+                    as={Link}
+                    to={`/kambaz/Courses/${cid}/Assignments/${assignment._id}`}
+                    className="wd-assignment-group"
+                    key={assignment._id}
+                    >
+                        <h4 className="wd-assignment-group-title">{assignment.title}</h4>
+                        <p className="wd-assignment-group-description">{assignment.description}</p>
+                    </ListGroup.Item>
+                ))}
+            </ListGroup>
+            </div>
+            );
 }

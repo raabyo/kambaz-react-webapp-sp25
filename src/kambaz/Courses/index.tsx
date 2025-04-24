@@ -1,18 +1,24 @@
 import CourseNavigation from "./Navigation";
-import { Navigate, Route, Routes } from "react-router";
+import { Navigate, Route, Routes, useLocation } from "react-router";
 import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import { FormatAlignJustify } from "@material-ui/icons";
 import PeopleTable from "./People/Table";
+import { useParams } from "react-router";
 
-export default function Courses() {
+
+export default function Courses( {courses} : { courses: any[]; }) {
+    const { cid } = useParams();
+    const course = courses.find((course) => course._id === cid);
+    const { pathname } = useLocation();
+
     return (
         <div id="wd-courses">
             <h2 className="text-danger">
                 <FormatAlignJustify className="me-4 fs-4 mb-1" />
-                Course 1234</h2>
+                {course?.name} &gt; {pathname.split("/").pop(0)}</h2>
             <hr />
 
             <div className="d-flex">

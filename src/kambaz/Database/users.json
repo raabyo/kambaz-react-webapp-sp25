@@ -1,0 +1,6 @@
+[
+    { "_id": "123", "username": "omar.r", "password": "123" },
+    { "_id": "456", "username": "d.john", "password": "456" },
+    { "_id": "789", "username": "d.jane", "password": "789" },
+    { "_id": "321", "username": "w.salma", "password": "321" },
+    { "_id": "654", "username": "l.weiss", "password": "654" } ]
